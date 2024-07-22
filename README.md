@@ -4,6 +4,8 @@
 
 Este es un proyecto de una aplicación de escritorio para la gestión de una peluquería canina. La aplicación permite crear y gestionar los datos de mascotas y sus dueños, mostrando la información en una interfaz gráfica.
 
+Proyecto del curso de POO con Java de TodoCode
+
 ## Características
 
 - **Crear Mascota**: Permite almacenar los datos de una mascota y su dueño.
