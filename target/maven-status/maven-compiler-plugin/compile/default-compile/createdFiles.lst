@@ -5,9 +5,11 @@ com\mycompany\peluqueriacanina\igu\ModificarDatos$1.class
 com\mycompany\peluqueriacanina\logica\Duenio.class
 com\mycompany\peluqueriacanina\igu\ModificarDatos$2.class
 com\mycompany\peluqueriacanina\persistencia\exceptions\PreexistingEntityException.class
+com\mycompany\peluqueriacanina\igu\ThemeUtil$1.class
 com\mycompany\peluqueriacanina\igu\VerDatos$4.class
 com\mycompany\peluqueriacanina\igu\CargarDatos$2.class
 com\mycompany\peluqueriacanina\igu\VerDatos.class
+com\mycompany\peluqueriacanina\igu\ThemeUtil.class
 com\mycompany\peluqueriacanina\igu\VerDatos$2.class
 com\mycompany\peluqueriacanina\igu\Principal$2.class
 com\mycompany\peluqueriacanina\persistencia\exceptions\NonexistentEntityException.class

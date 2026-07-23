@@ -16,6 +16,57 @@ public class CargarDatos extends javax.swing.JFrame {
     public CargarDatos() {
         //control = new Controladora();
         initComponents();
+        customInit();
+    }
+
+    private void customInit() {
+        setTitle("Peluquería Canina - Cargar Datos");
+        setPreferredSize(new java.awt.Dimension(1020, 672));
+        ThemeUtil.applyWindowStyle(this);
+        
+        // Encabezado
+        jPanel1.setBackground(ThemeUtil.COLOR_BG_HEADER);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 36));
+        jLabel1.setForeground(ThemeUtil.COLOR_TEXT_LIGHT);
+        jLabel1.setText("Cargar Datos de Mascota");
+        
+        // Tarjeta de formulario
+        ThemeUtil.applyCardStyle(jPanel2);
+        
+        // Etiquetas
+        javax.swing.JLabel[] labels = {jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, jLabel9, jLabel10};
+        for (javax.swing.JLabel l : labels) {
+            ThemeUtil.applyLabelStyle(l, true);
+        }
+        
+        // Campos de texto
+        javax.swing.JTextField[] fields = {txtNombre, txtRaza, txtColor, txtNomDuenio, txtCelDuenio, txtObservaciones};
+        for (javax.swing.JTextField f : fields) {
+            ThemeUtil.applyTextFieldStyle(f);
+            f.setPreferredSize(new java.awt.Dimension(280, 36));
+        }
+        
+        // ComboBoxes
+        ThemeUtil.applyComboBoxStyle(cmbAlergico);
+        ThemeUtil.applyComboBoxStyle(cmbAtEsp);
+        cmbAlergico.setPreferredSize(new java.awt.Dimension(120, 34));
+        cmbAtEsp.setPreferredSize(new java.awt.Dimension(120, 34));
+        
+        // Botones de acción
+        ThemeUtil.applyPrimaryButton(btnGuardar);
+        btnGuardar.setText("Guardar Datos");
+        btnGuardar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 16));
+        
+        ThemeUtil.applyOutlineButton(btnLimpiar);
+        btnLimpiar.setText("Limpiar Campos");
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
+        
+        ThemeUtil.applyOutlineButton(btnVolverAtras);
+        btnVolverAtras.setText("Volver");
+        btnVolverAtras.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+
+        pack();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -251,7 +302,7 @@ public class CargarDatos extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)

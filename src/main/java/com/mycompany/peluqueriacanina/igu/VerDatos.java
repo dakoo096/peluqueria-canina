@@ -14,6 +14,48 @@ public class VerDatos extends javax.swing.JFrame {
     public VerDatos() {
         control = new Controladora();
         initComponents();
+        customInit();
+    }
+
+    private void customInit() {
+        setTitle("Peluquería Canina - Visualización de Clientes");
+        setPreferredSize(new java.awt.Dimension(1140, 720));
+        ThemeUtil.applyWindowStyle(this);
+        
+        // Encabezado
+        jPanel1.setBackground(ThemeUtil.COLOR_BG_HEADER);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 38));
+        jLabel1.setForeground(ThemeUtil.COLOR_TEXT_LIGHT);
+        jLabel1.setText("Registros de Clientes y Mascotas");
+        
+        // Tarjeta contenedor
+        ThemeUtil.applyCardStyle(jPanel2);
+        
+        // Etiqueta sección
+        ThemeUtil.applyLabelStyle(jLabel2, true);
+        jLabel2.setText("Mascotas Registradas:");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
+        
+        // Botones
+        ThemeUtil.applySecondaryButton(btnEditar);
+        btnEditar.setText("Editar");
+        btnEditar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
+        btnEditar.setPreferredSize(new java.awt.Dimension(130, 42));
+        
+        ThemeUtil.applyDangerButton(btnEliminar);
+        btnEliminar.setText("Borrar");
+        btnEliminar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
+        btnEliminar.setPreferredSize(new java.awt.Dimension(130, 42));
+        
+        ThemeUtil.applyOutlineButton(btnVolverAtras);
+        btnVolverAtras.setText("Volver");
+        btnVolverAtras.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        
+        // Aplicar estilo de tabla
+        ThemeUtil.applyTableStyle(tablaMascotas);
+
+        pack();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -164,7 +206,7 @@ public class VerDatos extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

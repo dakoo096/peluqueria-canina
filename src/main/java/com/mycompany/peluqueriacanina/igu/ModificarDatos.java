@@ -20,7 +20,58 @@ public class ModificarDatos extends javax.swing.JFrame {
         control = new Controladora();
         //this.num_cliente = num_cliente;//traemos el num de cliente y lo asignamos
         initComponents();
+        customInit();
         cargarDatos(num_cliente);
+    }
+
+    private void customInit() {
+        setTitle("Peluquería Canina - Modificar Datos");
+        setPreferredSize(new java.awt.Dimension(1020, 672));
+        ThemeUtil.applyWindowStyle(this);
+        
+        // Encabezado
+        jPanel1.setBackground(ThemeUtil.COLOR_BG_HEADER);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 36));
+        jLabel1.setForeground(ThemeUtil.COLOR_TEXT_LIGHT);
+        jLabel1.setText("Modificación de Registro");
+        
+        // Tarjeta de formulario
+        ThemeUtil.applyCardStyle(jPanel2);
+        
+        // Etiquetas
+        javax.swing.JLabel[] labels = {jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, jLabel9, jLabel10};
+        for (javax.swing.JLabel l : labels) {
+            ThemeUtil.applyLabelStyle(l, true);
+        }
+        
+        // Campos de texto
+        javax.swing.JTextField[] fields = {txtNombre, txtRaza, txtColor, txtNomDuenio, txtCelDuenio, txtObservaciones};
+        for (javax.swing.JTextField f : fields) {
+            ThemeUtil.applyTextFieldStyle(f);
+            f.setPreferredSize(new java.awt.Dimension(280, 36));
+        }
+        
+        // ComboBoxes
+        ThemeUtil.applyComboBoxStyle(cmbAlergico);
+        ThemeUtil.applyComboBoxStyle(cmbAtEsp);
+        cmbAlergico.setPreferredSize(new java.awt.Dimension(120, 34));
+        cmbAtEsp.setPreferredSize(new java.awt.Dimension(120, 34));
+        
+        // Botones de acción
+        ThemeUtil.applyPrimaryButton(btnGuardar);
+        btnGuardar.setText("Guardar Cambios");
+        btnGuardar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 16));
+        
+        ThemeUtil.applyOutlineButton(btnLimpiar);
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
+        
+        ThemeUtil.applyOutlineButton(btnVolverAtras);
+        btnVolverAtras.setText("Volver");
+        btnVolverAtras.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+
+        pack();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -259,7 +310,7 @@ public class ModificarDatos extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -282,7 +333,7 @@ public class ModificarDatos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
